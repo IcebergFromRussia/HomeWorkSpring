@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+
+
+    <bean id="bandList" class="foo.bar.performers.BandList">
+        <property name="collectives">
+        <list>
+            <bean id="kino" class="foo.bar.performers.Collective">
+                <property name="collective">
+                    <list>
+                        <bean class="foo.bar.performers.CollectiveParticipant">
+                            <property name="instruments">
+                                <list>
+                                    <bean class="foo.bar.instruments.Guitar"></bean>
+                                </list>
+                            </property>
+                        </bean>
+                        <bean class="foo.bar.performers.CollectiveParticipant">
+                            <property name="instruments">
+                                <list>
+                                    <bean class="foo.bar.instruments.Bass"></bean>
+                                </list>
+                            </property>
+                        </bean>
+                        <bean class="foo.bar.performers.CollectiveParticipant">
+                            <property name="instruments">
+                                <list>
+
+                                    <bean class="foo.bar.instruments.Voice"></bean>
+                                    <bean class="foo.bar.instruments.Drums"></bean>
+                                </list>
+                            </property>
+                        </bean>
+                    </list>
+                </property>
+                <property name="songs">
+                    <list>
+                        <bean id="kinoKukuhka" class="foo.bar.etc.Song">
+                            <property name="songsText"
+                                      value="
+                        Песен ещё ненаписанных
+                    Сколько, cкажи, кукушка, пропой. "
+                            />
+                            <property name="songsName"
+                                      value="Кукушка"
+                            />
+                        </bean>
+
+                        <bean id="kinoPachka" class="foo.bar.etc.Song">
+                            <property name="songsText"
+                                      value="
+                        Если есть в кормане пачка... "
+                            />
+                            <property name="songsName"
+                                      value="Пачка сигарет"
+                            />
+                        </bean>
+                    </list>
+                </property>
+            </bean>
+            <bean id="krematory" class="foo.bar.performers.Collective">
+                <property name="collective">
+                    <list>
+                        <bean class="foo.bar.performers.CollectiveParticipant">
+                            <property name="instruments">
+                                <list>
+                                    <bean class="foo.bar.instruments.Guitar"></bean>
+                                </list>
+                            </property>
+                        </bean>
+                        <bean class="foo.bar.performers.CollectiveParticipant">
+                            <property name="instruments">
+                                <list>
+                                    <bean class="foo.bar.instruments.Bass"></bean>
+                                </list>
+                            </property>
+                        </bean>
+                        <bean class="foo.bar.performers.CollectiveParticipant">
+                            <property name="instruments">
+                                <list>
+                                    <bean class="foo.bar.instruments.Drums"></bean>
+                                    <bean class="foo.bar.instruments.Voice"></bean>
+                                </list>
+                            </property>
+                        </bean>
+                    </list>
+                </property>
+                <property name="songs">
+                    <list>
+                        <bean id="krematoryMusorniyVeter" class="foo.bar.etc.Song">
+                            <property name="songsText"
+                                      value="
+                        Мусорный ветер, дым из трубы, плач природы, смех сатаны
+                    "
+                            />
+                            <property name="songsName"
+                                      value="Мусорный ветер"
+                            />
+                        </bean>
+                        <bean id="krematoryTanya" class="foo.bar.etc.Song">
+                            <property name="songsText"
+                                      value="
+                        Жаль, что она умерла, жаль, что она умерла
+                    Вокруг меня чужие люди, у них совсем другая игра
+                    И мне жаль, что она умерла
+"
+                            />
+                            <property name="songsName"
+                                      value="Таня"
+                            />
+                        </bean>
+                    </list>
+                </property>
+            </bean>
+        </list>
+        </property>
+    </bean>
+
+
+
+</beans>
